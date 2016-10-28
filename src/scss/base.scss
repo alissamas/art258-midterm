@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import 'nav';
+@import 'header';
+
+@mixin cta-style {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+* {
+  box-sizing: border-box;
+}
