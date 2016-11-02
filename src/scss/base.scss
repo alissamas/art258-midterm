@@ -2,11 +2,7 @@
 @import 'nav';
 @import 'header';
 @import 'main';
-
-@mixin cta-style {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-}
+@import 'footer';
 
 * {
   box-sizing: border-box;
