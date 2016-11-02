@@ -84,7 +84,7 @@ body {
 .vendors {
   display: flex;
   justify-content: center;
-  margin: 50px 200px;
+  margin: 40px 200px;
 
   .featured-vendor {
     display: block;
@@ -138,6 +138,32 @@ body {
       &:hover {
         background-color: #999;
       }
+    }
+  }
+}
+
+.section-header {
+  @include cta-style;
+
+  font-size: 2.2rem;
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+}
+
+.insta {
+  background-color: #666;
+  margin-top: 100px;
+  padding: 50px 200px;
+  padding-bottom: 100px;
+
+  .insta-feed {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 23%;
+      height: 100%;
     }
   }
 }
