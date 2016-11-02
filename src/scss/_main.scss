@@ -1,0 +1,30 @@
+@mixin cta-style {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.upcoming {
+  background-color: #d3d3d3;
+  position: relative;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 5%;
+    width: 60%;
+  }
+
+  h2 {
+    @include cta-style;
+
+    position: absolute;
+    font-size: 2.5rem;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
