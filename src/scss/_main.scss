@@ -17,6 +17,20 @@
   text-decoration: none;
 }
 
+@mixin vendor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2rem;
+}
+
+body {
+  margin: 0;
+}
+
 .upcoming {
   background-color: #c3c3c3;
   position: relative;
@@ -25,7 +39,7 @@
     display: block;
     margin: 0 auto;
     padding: 6%;
-    width: 70%;
+    width: 75%;
   }
 
   h2 {
@@ -63,6 +77,67 @@
   z-index: 999;
   position: absolute;
   display: block;
-  top: 1000px;
+  top: 1040px;
   width: 160%;
+}
+
+.vendors {
+  display: flex;
+  justify-content: center;
+  margin: 50px 200px;
+
+  .featured-vendor {
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+
+    h3 {
+      @include cta-style;
+      @include vendor-text;
+    }
+  }
+
+  .become-a-vendor {
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+
+    h3 {
+      @include cta-style;
+      @include vendor-text;
+    }
+
+    a {
+      @include cta-style;
+      @include vendor-text;
+      @include button;
+
+      top: 65%;
+      border-radius: 0 20px 20px;
+      color: white;
+      font-size: 0.8rem;
+      width: 150px;
+      padding: 2% 2.5%;
+
+      &:hover {
+        background-color: #999;
+      }
+    }
+  }
 }
