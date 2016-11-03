@@ -53,7 +53,7 @@ nav {
   nav {
     .nav-bottom {
       ul {
-        width: 90%;
+        width: 85%;
 
         li {
           padding: 1.2% 3%;
@@ -67,8 +67,18 @@ nav {
   nav {
     .mobile-logo {
       display: block;
-      float: left;
+      background-color: black;
+
+      img {
+        width: 14%;
+        padding: 12px;
+      }
     }
+
+    .nav-top {
+      display: none;
+    }
+
     .nav-bottom {
       display: none;
     }
