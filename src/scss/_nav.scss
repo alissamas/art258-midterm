@@ -53,10 +53,11 @@ nav {
   nav {
     .nav-bottom {
       ul {
-        width: 85%;
+        width: 100%;
+        list-style-type: none;
 
         li {
-          padding: 1.2% 3%;
+          padding: 1.2% 2%;
         }
       }
     }
