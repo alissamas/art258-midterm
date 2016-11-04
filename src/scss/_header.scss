@@ -8,7 +8,7 @@
 @mixin button {
   display: block;
   background-color: #666;
-  padding: 1% 2%;
+  padding: 12px 20px;
   width: 200px;
   border-radius: 20px 20px 0;
   margin: 0 auto;
@@ -28,9 +28,9 @@ header {
     font-weight: 400;
     text-align: center;
     font-size: 4em;
-    padding: 200px 50px 0 0;
+    padding-top: 200px;
+    padding-bottom: 0;
     margin: 0 auto;
-    width: 50%;
   }
 
   .button {
@@ -45,10 +45,28 @@ header {
   }
 }
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 750px) {
   header {
     h1 {
-      width: 60%;
+      font-size: 3em;
+      padding-top: 180px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    height: 400px;
+
+    h1 {
+      font-size: 2.2em;
+      line-height: 1.5em;
+      padding-top: 120px;
+    }
+
+    .button {
+      font-size: 0.8em;
+      padding: 10px 12px;
     }
   }
 }
