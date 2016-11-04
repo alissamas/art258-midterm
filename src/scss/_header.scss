@@ -47,21 +47,20 @@ header {
 
 @media only screen and (max-width: 750px) {
   header {
+    height: 400px;
+
     h1 {
       font-size: 3em;
-      padding-top: 180px;
+      padding-top: 120px;
     }
   }
 }
 
 @media only screen and (max-width: 500px) {
   header {
-    height: 400px;
-
     h1 {
       font-size: 2.2em;
       line-height: 1.5em;
-      padding-top: 120px;
     }
 
     .button {

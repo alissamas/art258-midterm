@@ -7,7 +7,7 @@
 @mixin button {
   display: block;
   background-color: #666;
-  padding: 1% 2%;
+  padding: 12px 20px;
   width: 200px;
   border-radius: 20px 20px 0;
   margin: 0 auto;
@@ -61,6 +61,7 @@ body {
     position: absolute;
     font-size: 1rem;
     color: white;
+    width: 160px;
     top: 55%;
     left: 50%;
     margin: 0;
@@ -78,7 +79,7 @@ body {
     position: absolute;
     display: block;
     bottom: 0;
-    width: 170%;
+    width: 100%;
     padding: 0;
   }
 }
@@ -86,7 +87,7 @@ body {
 .vendors {
   display: flex;
   justify-content: center;
-  margin: 40px 200px;
+  margin: 40px 20%;
 
   .featured-vendor {
     display: block;
@@ -135,7 +136,6 @@ body {
       color: white;
       font-size: 0.8rem;
       width: 150px;
-      padding: 2% 2.5%;
 
       &:hover {
         background-color: #999;
@@ -161,6 +161,7 @@ body {
 
   h2 {
     color: white;
+    text-transform: lowercase;
   }
 
   .insta-feed {
@@ -175,15 +176,14 @@ body {
 }
 
 .mailing-list {
-  padding: 50px 200px;
+  padding-top: 50px;
   position: relative;
 
   .cloud-2 {
     position: absolute;
     z-index: -99;
     top: 0;
-    right: -10%;
-    width: 250%;
+    width: 100%;
   }
 
   h2 {
@@ -194,15 +194,18 @@ body {
     display: flex;
     justify-content: center;
 
-    h6 {
+    input {
       @include cta-style;
 
-      display: inline-block;
       font-style: italic;
       color: #999;
       background-color: white;
-      padding: 2%;
-      width: 35%;
+      height: auto;
+      display: block;
+      padding: 0;
+      width: 250px;
+      text-align: center;
+      height: 50px;
     }
 
     a {
@@ -211,7 +214,7 @@ body {
 
       display: inline-block;
       color: white;
-      padding: 2% 3%;
+      padding: 10px 16px;
       height: 100%;
       margin: 2%;
 
@@ -233,5 +236,96 @@ body {
       transform: rotate(7deg);
       transition: transform 0.8s ease-in-out;
     }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .upcoming {
+    h2 {
+      font-size: 2rem;
+      line-height: 2.8rem;
+      padding-bottom: 10px;
+    }
+
+    .button {
+      font-size: 0.8em;
+      padding: 10px 12px;
+    }
+  }
+
+  .insta {
+    padding: 50px 16%;
+
+    .insta-feed {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
+      .hide-4-mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .vendors {
+    flex-direction: column;
+    margin: 40px 16%;
+
+    .featured-vendor {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .become-a-vendor {
+      h3 {
+        font-size: 1.5rem;
+        top: 45%;
+      }
+
+      a {
+        top: 70%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .upcoming {
+    padding-top: 40px;
+
+    h2 {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      padding-bottom: 5px;
+      margin: 0;
+      top: 45%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    img {
+      width: 85%;
+    }
+
+    .button {
+      font-size: 0.8em;
+      padding: 8px 0;
+      width: 140px;
+      top: 65%;
+    }
+
+    .cloud-1 {
+      bottom: -5%;
+    }
+  }
+
+  .section-header {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
