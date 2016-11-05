@@ -14,3 +14,5 @@ $window.on('resize', function() {
     $navToggle.addClass('active');
   }
 });
+
+$("img.lazy").lazyload();
