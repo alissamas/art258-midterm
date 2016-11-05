@@ -200,12 +200,11 @@ body {
       font-style: italic;
       color: #999;
       background-color: white;
-      height: auto;
+      height: 50px;
       display: block;
       padding: 0;
-      width: 250px;
+      width: 300px;
       text-align: center;
-      height: 50px;
     }
 
     a {
@@ -214,9 +213,9 @@ body {
 
       display: inline-block;
       color: white;
-      padding: 10px 16px;
-      height: 100%;
-      margin: 2%;
+      padding: 15px 16px;
+      height: 50px;
+      margin: 0 2%;
 
       &:hover {
         background-color: #999;

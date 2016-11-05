@@ -9,7 +9,8 @@ footer {
     text-transform: uppercase;
     font-weight: 400;
     color: white;
-    padding: 5%;
+    padding-top: 50px;
+    padding-bottom: 30px;
     font-size: 0.8rem;
     margin: 0;
   }
@@ -21,5 +22,10 @@ footer {
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .social-icons i {
+    color: white;
+    margin: 0 10px;
   }
 }
