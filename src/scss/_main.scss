@@ -79,7 +79,7 @@ body {
     position: absolute;
     display: block;
     bottom: 0;
-    width: 100%;
+    width: 150%;
     padding: 0;
   }
 }
@@ -267,6 +267,15 @@ body {
       }
     }
   }
+
+  .mailing-list {
+    background-color: #333;
+    padding-top: 30px;
+
+    .cloud-2 {
+      top: 50px;
+    }
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -289,6 +298,14 @@ body {
       a {
         top: 70%;
       }
+    }
+  }
+
+  .mailing-list {
+    padding-top: 30px;
+
+    .cloud-2 {
+      top: 100px;
     }
   }
 }
@@ -326,5 +343,11 @@ body {
   .section-header {
     font-size: 1.4rem;
     line-height: 2rem;
+  }
+
+  .sign-up {
+    input {
+      width: 200px;
+    }
   }
 }
