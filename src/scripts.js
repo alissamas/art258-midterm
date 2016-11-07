@@ -18,9 +18,9 @@ $window.on('resize', function() {
 $("img.lazy").lazyload();
 
 $(".leaf").mouseover(function(){
-    $(".leaf").css("transform", "rotate(2deg)");
+    $(".leaf").css("transform", "rotate(3deg)");
 });
 
 $(".leaf").mouseout(function(){
-    $(".leaf").css("transform", "rotate(-2deg)");
+    $(".leaf").css("transform", "rotate(-3deg)");
 });
