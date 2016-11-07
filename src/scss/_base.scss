@@ -1,5 +1,9 @@
+$primary-color: #666;
+$secondary-color: #333;
+$default-font: 'Montserrat', sans-serif;
+
 @mixin cta-style {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $default-font;
   text-transform: uppercase;
   font-weight: 400;
   text-decoration: none;
@@ -7,7 +11,7 @@
 
 @mixin button {
   display: block;
-  background-color: #666;
+  background-color: $primary-color;
   padding: 12px 20px;
   width: 200px;
   border-radius: 20px 20px 0;

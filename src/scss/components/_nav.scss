@@ -15,7 +15,7 @@ nav {
   }
 
   .nav-bottom {
-    background-color: #333;
+    background-color: $secondary-color;
     display: flex;
     justify-content: space-between;
 
@@ -121,7 +121,7 @@ nav {
           padding-left: 0;
 
           &:hover {
-            background-color: #333;
+            background-color: $secondary-color;
           }
 
           a {
