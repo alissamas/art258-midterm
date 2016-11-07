@@ -24,3 +24,11 @@ $(".leaf").mouseover(function(){
 $(".leaf").mouseout(function(){
     $(".leaf").css("transform", "rotate(-3deg)");
 });
+
+$(".leaf-2").mouseover(function(){
+    $(".leaf").css("transform", "rotate(3deg)");
+});
+
+$(".leaf-2").mouseout(function(){
+    $(".leaf").css("transform", "rotate(-3deg)");
+});
