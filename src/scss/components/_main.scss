@@ -10,6 +10,7 @@ body {
     display: block;
     margin: 0 auto;
     padding: 6%;
+    padding-bottom: 10%;
     width: 75%;
   }
 
@@ -130,6 +131,16 @@ body {
   padding: 50px 200px;
   padding-bottom: 100px;
 
+  .invisible {
+    transition: opacity 0.5s ease;
+    opacity: 0.0;
+  }
+
+  .visible {
+    transition: opacity 0.5s ease;
+    opacity: 1.0;
+  }
+
   h2 {
     color: white;
     text-transform: lowercase;
@@ -207,6 +218,18 @@ body {
       transition: transform 0.8s ease-in-out;
     }
   }
+}
+
+.fromTopIn {
+	transition: transform 1.0s ease, opacity 1.0s ease;
+	transform: translate(0,0);
+	opacity: 1.0;
+}
+
+.fromTopOut {
+	transition: transform 1.0s ease, opacity 1.0s ease;
+	transform: translate(0,-10px);
+	opacity: 0.0;
 }
 
 @media only screen and (max-width: 1020px) {

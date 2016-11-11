@@ -49,7 +49,7 @@
         <img class="cloud-1" src="src/images/cloud.png">
       </section>
 
-      <h2 class="section-header">vendor spotlight</h2>
+      <h2 data-scroll="toggle(.fromTopIn, .fromTopOut)" class="section-header">vendor spotlight</h2>
       <section class="vendors">
         <div class="featured-vendor">
           <img src="/images/placeholder_small.png">
@@ -68,7 +68,7 @@
           <img src="/images/placeholder_small.png">
           <img class="hide-4-mobile" src="/images/placeholder_small.png">
           <img class="hide-4-mobile" src="/images/placeholder_small.png">
-          <img class="lazy hide-4-mobile" data-original="/images/placeholder_small.png" width="640" height="480">
+          <img class="hide-4-mobile" src="/images/placeholder_small.png">
         </div>
       </section>
 
@@ -99,11 +99,25 @@
       <a href="https://www.instagram.com/hnlnightmarket/" target="_blank"> <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
       </div>
     </footer>
-
   </body>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="/src/jquery.lazyload.js" type="text/javascript"></script>
+  <script src="/src/ScrollTrigger.min.js"></script>
+  <script>
+  window.counter = function() {
+  	// this refers to the html element with the data-scroll-showCallback tag
+  	var span = this.querySelector('span');
+  	var current = parseInt(span.textContent);
+
+  	span.textContent = current + 1;
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var trigger = new ScrollTrigger({
+  	  addHeight: true
+    });
+  });
+  </script>
   <script src="/src/scripts.js"></script>
 </html>
