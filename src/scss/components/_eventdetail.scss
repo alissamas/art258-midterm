@@ -144,3 +144,58 @@
     }
   }
 }
+
+@media only screen and (max-width: 760px) {
+  .eat {
+    padding: 4%;
+    padding-bottom: 100px;
+
+    .leaf {
+      right: -250px;
+    }
+
+    .eat-list {
+      justify-content: space-around;
+      font-size: 0.8rem;
+
+      .column-1 {
+        width: 50%;
+      }
+
+      .column-2 {
+        width: 50%;
+      }
+    }
+  }
+
+  .shop {
+    padding: 4%;
+    padding-bottom: 50px;
+
+    .cloud {
+      top: -100px;
+    }
+
+    .shop-list {
+      justify-content: space-around;
+      font-size: 0.8rem;
+
+      .column-1 {
+        width: 50%;
+      }
+
+      .column-2 {
+        width: 50%;
+      }
+    }
+  }
+
+  .see {
+    padding: 4%;
+    padding-bottom: 50px;
+
+    .lineup {
+      width: 80%;
+    }
+  }
+}

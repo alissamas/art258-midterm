@@ -290,7 +290,7 @@ body {
     padding-top: 30px;
 
     .cloud-2 {
-      top: 100px;
+      top: 120px;
     }
   }
 }
@@ -345,8 +345,17 @@ body {
   }
 
   .sign-up {
+    width: 90%;
+    margin: 0 auto;
+
     input {
       width: 200px;
+    }
+  }
+
+  .map {
+    img {
+      width: 150%;
     }
   }
 }
