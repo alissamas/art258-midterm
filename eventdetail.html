@@ -43,7 +43,7 @@
     <main>
       <section class="eat">
         <img class="leaf" src="/images/leaf.png">
-        <h2 class="section-header">eat</h2>
+        <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">eat</h2>
         <div class="eat-list">
           <div class="column-1">
             <ul>
@@ -73,7 +73,7 @@
       </section>
 
       <section class="shop">
-        <h2 class="section-header">shop</h2>
+        <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">shop</h2>
         <img class="cloud" src="/images/cloud2.png">
         <img class="sprinkles" src="/images/sprinkles.png">
         <div class="shop-list">
@@ -103,7 +103,7 @@
 
       <section class="see">
           <img class="leaf-2" src="/images/leaf.png">
-          <h2 class="section-header">see</h2>
+          <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">see</h2>
           <div class="lineup">
             <div class="lineup-first">
               <h3>6pm / </h3>
@@ -117,7 +117,7 @@
       </section>
 
       <section class="mailing-list">
-        <h2 class="section-header">stay updated</h2>
+        <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">stay updated</h2>
         <img class="cloud-2" src="src/images/cloud2.png">
         <div class="sign-up">
           <input type="text" name="fname" id="fname" placeholder="email address">
@@ -148,5 +148,21 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/src/ScrollTrigger.min.js"></script>
+  <script>
+  window.counter = function() {
+    // this refers to the html element with the data-scroll-showCallback tag
+    var span = this.querySelector('span');
+    var current = parseInt(span.textContent);
+
+    span.textContent = current + 1;
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var trigger = new ScrollTrigger({
+      addHeight: true
+    });
+  });
+  </script>
   <script src="/src/scripts.js"></script>
 </html>

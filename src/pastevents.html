@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="demo.css" rel="stylesheet">
   </head>
   <body>
 
@@ -46,16 +45,16 @@
         <main>
           <section class="past-event-gallery">
             <ul>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
-              <li><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
+              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
             </ul>
           </section>
           <div class="more"><a class="load-more" href="#">load more</a></div>
@@ -89,8 +88,23 @@
           </div>
         </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/src/scripts.js"></script>
-    <script src="../ScrollTrigger.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/src/ScrollTrigger.min.js"></script>
+        <script>
+        window.counter = function() {
+        	// this refers to the html element with the data-scroll-showCallback tag
+        	var span = this.querySelector('span');
+        	var current = parseInt(span.textContent);
+
+        	span.textContent = current + 1;
+        };
+
+        document.addEventListener('DOMContentLoaded', function(){
+          var trigger = new ScrollTrigger({
+        	  addHeight: true
+          });
+        });
+        </script>
+        <script src="/src/scripts.js"></script>
   </body>
 </html>
