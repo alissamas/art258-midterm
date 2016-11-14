@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="demo.css" rel="stylesheet">
   </head>
   <body>
 
@@ -39,7 +40,7 @@
         </nav>
 
         <header>
-          <h1>past events</h1>
+          <h1 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">past events</h1>
         </header>
 
         <main>
@@ -61,7 +62,7 @@
         </main>
 
         <section class="mailing-list">
-          <h2 class="section-header">stay updated</h2>
+          <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">stay updated</h2>
           <img class="cloud-2" src="/images/cloud2.png">
           <div class="sign-up">
             <input type="text" name="fname" id="fname" placeholder="email address">
@@ -90,5 +91,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/src/scripts.js"></script>
+    <script src="../ScrollTrigger.min.js"></script>
   </body>
 </html>

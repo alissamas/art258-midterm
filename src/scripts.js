@@ -1,5 +1,4 @@
 // nav toggle
-
 var $navToggle = $('.nav-toggle');
 var $mainNavUl = $('.mobile-toggle');
 var $window = $(window);
@@ -18,7 +17,6 @@ $window.on('resize', function() {
 });
 
 // leaf movement
-
 $(".leaf").mouseover(function(){
     $(".leaf").css("transform", "rotate(3deg)");
 });
@@ -35,14 +33,7 @@ $(".leaf-2").mouseout(function(){
     $(".leaf").css("transform", "rotate(-3deg)");
 });
 
-// scroll trigger attempt
-
-document.addEventListener('DOMContentLoaded', function(){
-    var trigger = new ScrollTrigger();
-});
-
 // past events load more
-
 $(document).ready(function () {
     $('.past-event-gallery li:lt(6)').show();
     $('.less').hide();
@@ -56,4 +47,19 @@ $(document).ready(function () {
              $('.more').hide();
              }
     });
+});
+
+// ScrollTrigger
+window.counter = function() {
+  // this refers to the html element with the data-scroll-showCallback tag
+  var span = this.querySelector('span');
+  var current = parseInt(span.textContent);
+
+  span.textContent = current + 1;
+};
+
+document.addEventListener('DOMContentLoaded', function(){
+  var trigger = new ScrollTrigger({
+    addHeight: true
+  });
 });
