@@ -2,11 +2,49 @@
   height: 400px;
 }
 
-.past-event-list {
-  display: flex;
-  justify-content: center;
+.past-event-gallery {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  z-index: 999;
+  clear: both;
+  height: auto;
 
-  img {
-    width: auto;
+  ul {
+    li {
+      list-style: none;
+      width: 50%;
+      float: left;
+      display: none;
+
+      img {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.load-more {
+  @include cta-style;
+
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+  color: $primary-color;
+}
+
+.mailing-list {
+  clear: both;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    height: 300px;
+  }
+
+  .load-more {
+    font-size: 0.8rem;
+    margin: 30px auto;
   }
 }

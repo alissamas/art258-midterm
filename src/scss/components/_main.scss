@@ -133,12 +133,12 @@ body {
 
   .invisible {
     transition: opacity 0.5s ease;
-    opacity: 0.0;
+    opacity: 0;
   }
 
   .visible {
     transition: opacity 0.5s ease;
-    opacity: 1.0;
+    opacity: 1;
   }
 
   h2 {
@@ -218,18 +218,6 @@ body {
       transition: transform 0.8s ease-in-out;
     }
   }
-}
-
-.fromTopIn {
-	transition: transform 1.0s ease, opacity 1.0s ease;
-	transform: translate(0,0);
-	opacity: 1.0;
-}
-
-.fromTopOut {
-	transition: transform 1.0s ease, opacity 1.0s ease;
-	transform: translate(0,-10px);
-	opacity: 0.0;
 }
 
 @media only screen and (max-width: 1020px) {

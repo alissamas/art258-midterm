@@ -1,3 +1,5 @@
+// nav toggle
+
 var $navToggle = $('.nav-toggle');
 var $mainNavUl = $('.mobile-toggle');
 var $window = $(window);
@@ -15,6 +17,8 @@ $window.on('resize', function() {
   }
 });
 
+// leaf movement
+
 $(".leaf").mouseover(function(){
     $(".leaf").css("transform", "rotate(3deg)");
 });
@@ -31,7 +35,25 @@ $(".leaf-2").mouseout(function(){
     $(".leaf").css("transform", "rotate(-3deg)");
 });
 
+// scroll trigger attempt
 
 document.addEventListener('DOMContentLoaded', function(){
     var trigger = new ScrollTrigger();
+});
+
+// past events load more
+
+$(document).ready(function () {
+    $('.past-event-gallery li:lt(6)').show();
+    $('.less').hide();
+    var items =  10;
+    var shown =  6;
+    $('.more').click(function () {
+        $('.less').show();
+        shown = $('.past-event-gallery li:visible').length+2;
+        if(shown< items) {$('.past-event-gallery li:lt('+shown+')').show(300);}
+        else {$('.past-event-gallery li:lt('+items+')').show(300);
+             $('.more').hide();
+             }
+    });
 });
