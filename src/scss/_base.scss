@@ -1,6 +1,28 @@
-$primary-color: #666;
-$secondary-color: #333;
-$default-font: 'Montserrat', sans-serif;
+$blue: #1b4251;
+$brown: #c07c19;
+$lightblue: #5893cd;
+$darkpink: #ff8189;
+$lightpink: #f9d0e2;
+$grey: #f4eaea;
+$default-font: 'Gotham', sans-serif;
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 400;
+  src: url("src/Gotham-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 700;
+  src: url("src/Gotham-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 300;
+  src: url("src/Gotham-Light.otf") format("opentype");
+}
 
 @mixin cta-style {
   font-family: $default-font;
@@ -11,7 +33,7 @@ $default-font: 'Montserrat', sans-serif;
 
 @mixin button {
   display: block;
-  background-color: $primary-color;
+  background-color: $darkpink;
   padding: 12px 20px;
   width: 200px;
   border-radius: 20px 20px 0;
@@ -20,6 +42,29 @@ $default-font: 'Montserrat', sans-serif;
   text-align: center;
   transition: background-color 0.5s;
   text-decoration: none;
+  color: white;
+
+  &:hover {
+    background-color: #ff5959;
+  }
+}
+
+@mixin button2 {
+  display: block;
+  background-color: $brown;
+  padding: 12px 20px;
+  width: 200px;
+  border-radius: 0 20px 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  transition: background-color 0.5s;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    background-color: #a36017;
+  }
 }
 
 @mixin vendor-text {

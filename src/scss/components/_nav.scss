@@ -1,11 +1,11 @@
 nav {
+  background-color: $blue;
+
   .mobile-nav {
     display: none;
   }
 
   .nav-top {
-    background-color: black;
-
     img {
       margin: 0 auto;
       width: 200px;
@@ -15,52 +15,64 @@ nav {
   }
 
   .nav-bottom {
-    background-color: $secondary-color;
     display: flex;
     justify-content: space-between;
+    border-top: 0.25px solid white;
+    border-bottom: 0.25px solid white;
+    width: 80%;
+    margin: 0 auto;
 
     ul {
-      width: 85%;
       margin: 0 auto;
+      width: 100%;
 
       li {
         display: inline-block;
-        padding: 1% 5%;
-        transition: background-color 0.8s;
+        padding: 1% 4%;
+        transition: all 0.6s;
 
         a {
           @include cta-style;
 
           color: white;
-          font-size: 0.75rem;
+          font-size: 0.7rem;
+          letter-spacing: 1px;
           text-decoration: none;
         }
 
         &:hover {
           background-color: black;
+          padding-bottom: 0.95%;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 1020px) {
+.eventdetail-nav {
+  background: $darkpink;
+}
+
+.pastevents-nav {
+  background: $brown;
+}
+
+@media only screen and (max-width: 1080px) {
   nav {
     .nav-bottom {
       ul {
         li {
-          padding: 1% 3%;
+          padding: 1% 2.5%;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 782px) {
   nav {
     .mobile-nav {
       display: block;
-      background-color: black;
 
       .nav-toggle {
         display: block;
@@ -79,7 +91,7 @@ nav {
           left: 0;
           width: 100%;
           height: 100%;
-          transition: all 0.5s;
+          transition: all 0.5s ease;
           border-top: 2px solid white;
           border-bottom: 2px solid white;
         }
@@ -112,8 +124,8 @@ nav {
 
       .mobile-toggle {
         display: none;
-        padding-left: 0;
-        margin-left: 0;
+        padding: 0;
+        margin: 0;
 
         li {
           text-align: center;
@@ -121,7 +133,7 @@ nav {
           padding-left: 0;
 
           &:hover {
-            background-color: $secondary-color;
+            background-color: black;
           }
 
           a {
@@ -130,6 +142,8 @@ nav {
             color: white;
             text-decoration: none;
             list-style-type: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
           }
         }
       }

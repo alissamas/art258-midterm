@@ -1,15 +1,17 @@
 header {
-  height: 600px;
-  background-color: #999;
+  height: 550px;
+  position: relative;
 
   h1 {
     @include cta-style;
 
+    z-index: 999;
     color: white;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
-    font-size: 4em;
-    padding-top: 200px;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+    padding-top: 150px;
     padding-bottom: 0;
     margin: 0 auto;
   }
@@ -18,15 +20,112 @@ header {
     @include cta-style;
     @include button;
 
-    color: #fff;
-
-    &:hover {
-      background-color: $secondary-color;
-    }
+    z-index: 999;
   }
 }
 
-@media only screen and (max-width: 750px) {
+.moon {
+  position: absolute;
+  width: 600px;
+  right: -150px;
+  top: 50px;
+  transition: all 1s ease;
+}
+
+.bird {
+  position: absolute;
+  width: 300px;
+  left: -40px;
+  bottom: -90px;
+  z-index: 3;
+  transition: all 1s ease;
+}
+
+.banana {
+  position: absolute;
+  width: 350px;
+  left: -60px;
+  bottom: 150px;
+  transition: all 1s ease;
+}
+
+.leaf1 {
+  position: absolute;
+  width: 320px;
+  left: -100px;
+  top: 230px;
+  transform: rotate(170deg);
+  z-index: 2;
+  transition: all 1s ease;
+}
+
+.leaf2 {
+  position: absolute;
+  width: 300px;
+  right: -60px;
+  bottom: 70px;
+  transform: rotate(40deg);
+  z-index: 4;
+  transition: all 1s ease;
+}
+
+.banana2 {
+  position: absolute;
+  transform: rotate(-100deg);
+  width: 350px;
+  right: -90px;
+  bottom: -120px;
+  z-index: 5;
+  transition: all 1s ease;
+}
+
+.cloud3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.home-header {
+  background: $blue;
+}
+
+.pastevents-header {
+  background: $brown;
+
+  h1 {
+    padding-top: 175px;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .moon {
+    right: -270px;
+  }
+
+  .leaf2 {
+    right: -150px;
+  }
+
+  .leaf1 {
+    left: -100px;
+  }
+
+  .bird {
+    left: -100px;
+  }
+
+  .banana {
+    transform: rotate(-5deg);
+    left: -160px;
+  }
+
+  .banana2 {
+    transform: rotate(-85deg);
+  }
+}
+
+@media only screen and (max-width: 782px) {
   header {
     height: 400px;
 
@@ -34,6 +133,35 @@ header {
       font-size: 3em;
       padding-top: 120px;
     }
+  }
+
+  .moon {
+    width: 500px;
+    right: -200px;
+    top: 30px;
+  }
+
+  .leaf2 {
+    width: 250px;
+    right: -100px;
+  }
+
+  .leaf1 {
+    width: 250px;
+  }
+
+  .banana {
+    left: -200px;
+    top: 100px;
+  }
+
+  .banana2 {
+    right: -200px;
+    transform: rotate(-95deg);
+  }
+
+  .bird {
+    left: -140px;
   }
 }
 
@@ -49,5 +177,32 @@ header {
       padding: 10px 12px;
       width: 160px;
     }
+  }
+
+  .moon {
+    right: -200px;
+    width: 450px;
+  }
+
+  .leaf2 {
+    right: -160px;
+    bottom: 0;
+  }
+
+  .banana2 {
+    right: -270px;
+    bottom: -200px;
+  }
+
+  .leaf1 {
+    left: -150px;
+  }
+
+  .banana {
+    left: -280px;
+  }
+
+  .bird {
+    left: -210px;
   }
 }

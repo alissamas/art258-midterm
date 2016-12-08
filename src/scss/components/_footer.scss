@@ -1,6 +1,6 @@
 footer {
   text-align: center;
-  background-color: #999;
+  background-color: $blue;
   margin: 0;
   height: 250px;
 
@@ -27,5 +27,15 @@ footer {
   .social-icons i {
     color: white;
     margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  footer {
+    padding: 0 2%;
+
+    h6 {
+      font-size: 0.7rem;
+    }
   }
 }

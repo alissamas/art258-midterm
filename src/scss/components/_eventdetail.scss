@@ -1,14 +1,18 @@
+.header-eventdetail {
+  background-color: $darkpink;
+}
+
 .eat {
   position: relative;
   padding: 5% 8%;
   padding-bottom: 100px;
 
-  .leaf {
+  .spam {
     position: absolute;
-    width: 30%;
-    top: 100px;
-    right: -100px;
-    transition: transform ease-in-out 2s;
+    width: 40%;
+    top: 130px;
+    right: -200px;
+    z-index: 999;
   }
 
   .eat-list {
@@ -25,11 +29,11 @@
 
         a {
           text-decoration: none;
-          color: $secondary-color;
-          transition: all 0.5s;
+          color: $blue;
+          transition: all 0.4s;
 
           &:hover {
-            padding-left: 8px;
+            padding-left: 10px;
           }
         }
       }
@@ -47,31 +51,39 @@
 
 .shop {
   position: relative;
-  background-color: $secondary-color;
+  background-color: $grey;
   padding: 5% 8%;
   padding-top: 2%;
   padding-bottom: 100px;
 
   h2 {
-    color: white;
+    color: black;
+  }
+
+  .glasses {
+    position: absolute;
+    transform: rotateY(180deg);
+    left: -140px;
+    width: 400px;
+    z-index: 20;
   }
 
   .cloud {
     position: absolute;
-    width: 120%;
-    transform: rotate(180deg);
-    top: -200px;
+    width: 100%;
+    transform: rotate(182deg);
+    top: -180px;
     right: 0;
     z-index: -99;
   }
 
   .sprinkles {
     position: absolute;
-    width: 40%;
-    transform: rotate(-30deg);
-    left: -180px;
-    top: 150px;
-    z-index: 99;
+    width: 550px;
+    transform: rotate(-50deg);
+    left: -220px;
+    top: -160px;
+    z-index: 10;
   }
 
   .shop-list {
@@ -88,11 +100,11 @@
 
         a {
           text-decoration: none;
-          color: white;
-          transition: all 0.5s;
+          color: black;
+          transition: all 0.4s;
 
           &:hover {
-            padding-left: 8px;
+            padding-left: 10px;
           }
         }
       }
@@ -113,17 +125,28 @@
   padding-bottom: 100px;
   position: relative;
 
-  .leaf-2 {
+  .shoes {
     position: absolute;
     z-index: 100;
-    left: -120px;
+    right: -120px;
     top: -20px;
-    width: 30%;
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    transition: transform ease-in-out 2s;
+    width: 40%;
+  }
+
+  .banana3 {
+    position: absolute;
+    right: -70px;
+    width: 350px;
+    transform: rotate(-80deg);
+    top: -120px;
+  }
+
+  .banana4 {
+    position: absolute;
+    right: -50px;
+    width: 350px;
+    transform: rotate(-100deg);
+    top: -30px;
   }
 
   .lineup {
@@ -145,10 +168,63 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .eat {
+    .spam {
+      width: 40%;
+      top: 130px;
+      right: -150px;
+      z-index: 999;
+      transition: all 0.7s ease;
+    }
+  }
+
+  .shop {
+    .sprinkles {
+      left: -280px;
+      top: -240px;
+      transition: all 0.7s ease;
+    }
+
+    .glasses {
+      left: -210px;
+      transition: all 0.7s ease;
+    }
+
+    .shop-list {
+      z-index: 30;
+    }
+  }
+
+  .see {
+    .banana3 {
+      right: -180px;
+      transform: rotate(-90deg);
+      transition: all 0.5s ease;
+    }
+
+    .banana4 {
+      right: -150px;
+      transform: rotate(-110deg);
+      transition: all 0.5s ease;
+    }
+
+    .shoes {
+      right: -600px;
+      top: 40px;
+      transition: all 0.9s ease;
+    }
+  }
+}
+
 @media only screen and (max-width: 760px) {
   .eat {
     padding: 4%;
     padding-bottom: 100px;
+
+    .spam {
+      right: -500px;
+    }
 
     .leaf {
       right: -250px;
@@ -159,11 +235,11 @@
       font-size: 0.8rem;
 
       .column-1 {
-        width: 50%;
+        width: 40%;
       }
 
       .column-2 {
-        width: 50%;
+        width: 40%;
       }
     }
   }
@@ -176,16 +252,27 @@
       top: -100px;
     }
 
+    .glasses {
+      left: -400px;
+    }
+
+    .sprinkles {
+      transition: all 0.7s ease;
+      width: 400px;
+      left: -250px;
+      top: -120px;
+    }
+
     .shop-list {
       justify-content: space-around;
       font-size: 0.8rem;
 
       .column-1 {
-        width: 50%;
+        width: 40%;
       }
 
       .column-2 {
-        width: 50%;
+        width: 40%;
       }
     }
   }
@@ -193,6 +280,17 @@
   .see {
     padding: 4%;
     padding-bottom: 50px;
+
+    .banana3 {
+      width: 250px;
+      right: -180px;
+      top: -80px;
+    }
+
+    .banana4 {
+      width: 250px;
+      right: -140px;
+    }
 
     .lineup {
       width: 80%;
